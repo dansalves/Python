@@ -2,6 +2,7 @@ from time import time
 import pyautogui
 import PIL
 import time
+import os
 
 '''
 pyautogui.press(['win'])
@@ -10,8 +11,7 @@ pyautogui.press('enter')
 
 time.sleep(1.5)
 
-pyautogui.click('CISS dia.png')
-pyautogui.click('OPEN SESSION.png')
+pyautogui.doubleClick('CISS DIA.png')
 
 time.sleep(14)
 
@@ -36,25 +36,25 @@ pyautogui.write('150068')
 pyautogui.press(['tab','space'])
 
 time.sleep(0.5)
-'''
 
+'''
 ljsDIA="7010"
 
 with open('lojasDia.txt','r') as lojas_dia:
     
     for ljsDIA in lojas_dia:
-        '''
+        
         pyautogui.press('tab', presses=5)
         pyautogui.write(ljsDIA)
         pyautogui.press('tab', presses=3)
         pyautogui.press('space')
     
         time.sleep(12)
-        '''
+        
         pyautogui.press('x')
         time.sleep(5)
-        #pyautogui.write(ljsDIA+'rel')
-        #time.sleep(4)
+        pyautogui.write(ljsDIA+'rel')
+        time.sleep(4)
         pyautogui.press('tab')
         time.sleep(10)
         pyautogui.write('m')

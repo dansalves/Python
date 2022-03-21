@@ -39,7 +39,9 @@ for ljP in range(1,12):
     
     pyautogui.press('tab', presses=5)
     pyautogui.write(strMP)
-    pyautogui.press('tab', presses=4)
+    pyautogui.press('tab')
+    pyautogui.write('4')
+    pyautogui.press('tab', presses=3)
     pyautogui.press('space')
     
     time.sleep(10)
@@ -60,7 +62,9 @@ strMP=str(ljP)
 
 pyautogui.press('tab', presses=5)
 pyautogui.write(strMP)
-pyautogui.press('tab', presses=4)
+pyautogui.press('tab')
+pyautogui.write('5')
+pyautogui.press('tab', presses=3)
 pyautogui.press('space')
 
 time.sleep(10)
